@@ -2,7 +2,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Dashboard extends  MY_Controller {
 
     public function index()
     {
@@ -17,42 +17,44 @@ class Dashboard extends CI_Controller {
     }
 
 
-    public function submit()
+     public function submit()
     {
         $url = trim($this->input->post('youtube_url'));
 
-        if (!$url || (!str_contains($url, 'youtube.com') && !str_contains($url, 'youtu.be'))) {
+        if (
+            !$url ||
+            (strpos($url, 'youtube.com') === false &&
+             strpos($url, 'youtu.be') === false)
+        ) {
             show_error('Invalid YouTube URL', 400);
             return;
         }
 
-        $storageDir = APPPATH . '../storage';
-        $filePath   = $storageDir . '/jobs.json';
+        $storageDir = dirname($this->jobPath);
 
         if (!is_dir($storageDir)) {
             mkdir($storageDir, 0775, true);
         }
 
-        if (!file_exists($filePath)) {
-            file_put_contents($filePath, json_encode([]));
+        if (!file_exists($this->jobPath)) {
+            file_put_contents($this->jobPath, json_encode([]));
         }
 
-        $jobs = json_decode(file_get_contents($filePath), true);
+        $jobs = json_decode(file_get_contents($this->jobPath), true) ?: [];
 
         $jobId = 'job_' . time();
 
         $jobs[] = [
-            'id' => $jobId,
+            'id'          => $jobId,
             'youtube_url' => $url,
-            'status' => 'preview_ready',
-            'created_at' => date('Y-m-d H:i:s')
+            'status'      => 'preview_ready', // nanti bisa pakai const
+            'created_at'  => date('Y-m-d H:i:s')
         ];
 
-        file_put_contents($filePath, json_encode($jobs, JSON_PRETTY_PRINT));
+        file_put_contents($this->jobPath, json_encode($jobs, JSON_PRETTY_PRINT));
 
-        redirect('/web/dashboard/preview/' . $jobId);
+        redirect(base_url('dashboard/preview/' . $jobId));
     }
-
 
     public function preview($jobId)
     {

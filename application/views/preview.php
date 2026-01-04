@@ -1,86 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Clips Ready</title>
-    <style>
-        body {
-            background: #0f1220;
-            color: #fff;
-            font-family: system-ui;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-        }
-        .clips {
-            display: flex;
-            gap: 20px;
-        }
-        .clip {
-            background: #1a1f36;
-            padding: 12px;
-            border-radius: 12px;
-            width: 180px;
-        }
-        .clip img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .cta {
-            background: #1a1f36;
-            padding: 30px;
-            border-radius: 16px;
-        }
-        .btn {
-            display: block;
-            margin-top: 20px;
-            background: linear-gradient(90deg,#6b5cff,#8a7cff);
-            color: white;
-            padding: 14px;
-            text-align: center;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Clips Ready · Clipminer</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
-<h2>Success! Your clips are ready!</h2>
+<body class="bg-[#0f1220] text-white min-h-screen">
 
-<div class="container">
+    <!-- NAVBAR -->
+    <?php $this->load->view('component/navbar'); ?>
 
-    <div>
-        <div class="clips">
-            <?php foreach ($previews as $clip): ?>
-                <div class="clip">
-                    <img src="<?= $clip['thumbnail'] ?>" alt="">
-                    <p><?= $clip['title'] ?></p>
-                    <small><?= $clip['duration'] ?></small>
+    <!-- PAGE CONTENT -->
+    <main class="max-w-7xl mx-auto px-6 py-12">
+
+        <!-- Title -->
+        <h1 class="text-3xl font-bold mb-10">
+            Success! Your clips are ready!
+        </h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+            <!-- LEFT: CLIPS PREVIEW -->
+            <div class="lg:col-span-2">
+                <div class="flex flex-col sm:flex-row gap-6">
+
+                    <?php foreach ($previews as $clip): ?>
+                        <div class="w-full sm:w-56 bg-[#1a1f36] rounded-2xl p-4 shadow-lg">
+                            
+                            <div class="aspect-[9/16] bg-black/30 rounded-xl mb-4 flex items-center justify-center text-white/30">
+                                <!-- thumbnail placeholder -->
+                                Preview
+                            </div>
+
+                            <div class="space-y-1">
+                                <p class="font-semibold">
+                                    <?= $clip['title'] ?>
+                                </p>
+                                <p class="text-sm text-white/60">
+                                    <?= $clip['duration'] ?>
+                                </p>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+
                 </div>
-            <?php endforeach; ?>
+            </div>
+
+            <!-- RIGHT: CTA -->
+            <div class="bg-[#1a1f36] rounded-2xl p-8 shadow-xl flex flex-col justify-between">
+
+                <div>
+                    <h2 class="text-xl font-semibold mb-4">
+                        Let AI do the work
+                    </h2>
+
+                    <ul class="space-y-3 text-white/80 text-sm">
+                        <li class="flex gap-2">
+                            <span>✔</span>
+                            <span>Turn videos into short viral clips</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span>✔</span>
+                            <span>Automatic captions</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span>✔</span>
+                            <span>Easy editing</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span>✔</span>
+                            <span>Share to TikTok & Shorts</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-8">
+                    <a href="<?= base_url('login') ?>"
+                       class="block w-full text-center rounded-xl bg-indigo-600 hover:bg-indigo-500 transition py-4 font-semibold text-white">
+                        Continue →
+                    </a>
+
+                    <p class="text-center text-xs text-white/50 mt-4">
+                        Sign up to download your clips. It only takes a minute.
+                    </p>
+                </div>
+
+            </div>
         </div>
-    </div>
 
-    <div class="cta">
-        <h3>Let AI do the work</h3>
-        <ul>
-            <li>Turn videos into short viral clips</li>
-            <li>Automatic captions</li>
-            <li>Easy editing</li>
-            <li>Share to TikTok & Shorts</li>
-        </ul>
-
-        <a href="/login" class="btn">Continue →</a>
-        <p style="opacity:.7;margin-top:10px">
-            Sign up to download your clips. It only takes a minute.
-        </p>
-    </div>
-
-</div>
+    </main>
 
 </body>
 </html>

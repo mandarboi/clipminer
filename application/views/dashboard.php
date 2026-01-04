@@ -1,130 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Clipminer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php $this->load->view('component/head', ['title' => lang('dashboard') . ' · Clipminer']); ?>
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<body class="text-gray-600 min-h-screen flex flex-col">
 
-    <!-- Ionicons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<?php $this->load->view('component/navbar'); ?>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#4f46e5',     // indigo-600
-                        primaryDark: '#4338ca', // indigo-700
-                        accent: '#10b981'       // emerald-500
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-gray-50 min-h-screen flex items-center justify-center">
+<main class="min-h-screen text-gray-600">
 
-    <div class="w-full max-w-xl bg-white rounded-2xl shadow-lg p-8">
+    <div class="text-center mt-20 space-y-6">
 
-        <!-- Header -->
-        <div class="mb-6 flex items-center gap-3">
-            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-white">
-                <ion-icon name="cut-outline" class="text-2xl"></ion-icon>
-            </div>
-            <div>
-                <h1 class="text-2xl font-bold text-gray-800">Clipminer</h1>
-                <p class="text-gray-500 text-sm">
-                    Turn long videos into viral shorts
-                </p>
-            </div>
+        <div class="flex justify-center gap-6 text-3xl">
+            <ion-icon name="logo-instagram" class="text-pink-500"></ion-icon>
+            <ion-icon name="logo-tiktok" class="text-cyan-400"></ion-icon>
+            <ion-icon name="logo-youtube" class="text-red-500"></ion-icon>
         </div>
 
-        <!-- Form -->
-        <form id="clipForm" method="post" action="/dashboard/submit" class="space-y-4" novalidate>
+        <h1 class="text-3xl font-bold">
+            Turn videos into <span class="text-brand-primary">social-ready clips</span>
+        </h1>
 
-            <!-- Error message -->
-            <div id="errorBox" class="hidden flex items-center gap-2 bg-red-50 border border-red-200 text-red-600 text-sm rounded-lg px-4 py-3">
-                <ion-icon name="alert-circle-outline" class="text-lg"></ion-icon>
-                <span id="errorMessage">Invalid URL</span>
+        <p class="text-gray-600/60">
+            Optimized for Reels, TikTok & YouTube Shorts
+        </p>
+
+    </div>
+
+
+    <!-- INPUT BAR -->
+    <section class="sticky top-0 z-20 bg-brand-bg/80 backdrop-blur border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-6 py-5">
+            <form class="max-w-2xl mx-auto mt-10 space-y-4">
+
+                <input
+                    placeholder="Paste YouTube link here..."
+                    class="w-full px-5 py-4 rounded-xl
+                        bg-white/5 border border-white/10
+                        focus:ring-2 focus:ring-brand-primary
+                        text-sm"
+                >
+
+                <button
+                    class="w-full py-4 rounded-xl
+                        bg-brand-primary font-semibold
+                        hover:opacity-90 transition">
+                    Generate Clips
+                </button>
+
+                <p class="text-center text-xs text-gray-600/40">
+                    Free preview · No credit card required
+                </p>
+
+            </form>
+
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="max-w-5xl mx-auto px-6 py-10 space-y-6">
+
+        <h1 class="text-xl font-semibold">Your Jobs</h1>
+
+        <?php if (empty($jobs)): ?>
+            <!-- EMPTY STATE -->
+            <div class="border border-white/10 rounded-2xl p-10 text-center text-gray-600/50">
+                Paste a YouTube link above to generate your first clip.
             </div>
+        <?php endif; ?>
 
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">
-                    YouTube Video URL
-                </label>
+        <?php foreach (array_slice(array_reverse($jobs), 0, 3) as $job): ?>
+            <div class="flex items-center justify-between
+                        border border-white/10 rounded-xl
+                        px-5 py-4 bg-white/5">
 
-                <div class="relative">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
-                        <ion-icon name="logo-youtube"></ion-icon>
-                    </span>
+                <!-- LEFT -->
+                <div class="space-y-1">
+                    <p class="text-sm font-medium truncate max-w-md">
+                        <?= $job['youtube_url'] ?>
+                    </p>
+                    <p class="text-xs text-gray-600/50">
+                        <?= $job['created_at'] ?>
+                    </p>
+                </div>
 
-                    <input
-                        type="text"
-                        id="youtubeUrl"
-                        name="youtube_url"
-                        placeholder="https://www.youtube.com/watch?v=xxxxx"
-                        class="w-full rounded-lg border border-gray-300 pl-10 pr-4 py-3
-                            focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-                    >
+                <!-- RIGHT -->
+                <div class="flex items-center gap-3 text-sm">
 
+                    <?php if ($job['status'] === 'preview_ready'): ?>
+                        <span class="px-3 py-1 rounded-full bg-brand-primary/20
+                                     text-brand-primary text-xs">
+                            Preview ready
+                        </span>
+
+                        <a href="<?= base_url('dashboard/preview/'.$job['id']) ?>"
+                           class="text-brand-primary hover:underline">
+                            View →
+                        </a>
+
+                    <?php else: ?>
+                        <span class="px-3 py-1 rounded-full bg-white/10 text-xs">
+                            Processing…
+                        </span>
+                    <?php endif; ?>
 
                 </div>
             </div>
+        <?php endforeach; ?>
 
-            <button
-                type="submit"
-                class="w-full flex items-center justify-center gap-2
-                       bg-primary hover:bg-primaryDark
-                       text-white font-semibold py-3 rounded-lg transition"
-            >
-                <ion-icon name="rocket-outline"></ion-icon>
-                Create Clip Job
-            </button>
-        </form>
+    </section>
 
-        <!-- Job List -->
+</main>
 
-        <!-- Footer -->
-        <div class="mt-6 text-center text-sm text-gray-400 flex items-center justify-center gap-2">
-            <ion-icon name="sparkles-outline"></ion-icon>
-            AI-powered · Shorts-Reels-Tiktok Video · Viral Hunt
-        </div>
+<?php $this->load->view('component/footer'); ?>
 
-    </div>
-    <script>
-        const form = document.getElementById('clipForm');
-        const input = document.getElementById('youtubeUrl');
-        const errorBox = document.getElementById('errorBox');
-        const errorMessage = document.getElementById('errorMessage');
-
-        form.addEventListener('submit', function (e) {
-            const value = input.value.trim();
-
-            errorBox.classList.add('hidden');
-
-            if (value === '') {
-                e.preventDefault();
-                showError('Please paste a YouTube video URL.');
-                return;
-            }
-
-            if (!value.includes('youtube.com') && !value.includes('youtu.be')) {
-                e.preventDefault();
-                showError('That doesn’t look like a valid YouTube URL.');
-                return;
-            }
-        });
-
-        function showError(message) {
-            errorMessage.textContent = message;
-            errorBox.classList.remove('hidden');
-        }
-    </script>
-
-
-</body>
-</html>
