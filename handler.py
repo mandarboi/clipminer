@@ -1,13 +1,30 @@
 import runpod
+import subprocess
+import os
 
-# Fungsi utama yang akan dipanggil oleh dashboard laptop Anda
+def download_audio(url):
+    output = "/tmp/audio.wav"
+    cmd = [
+        "yt-dlp",
+        "-x",
+        "--audio-format", "wav",
+        "--postprocessor-args", "-t 30",
+        "-o", output,
+        url
+    ]
+    subprocess.run(cmd, check=True)
+    return output
+
 def handler(job):
-    job_input = job['input']
-    # Placeholder: Di sini nanti kita masukkan logika AI Face Crop
+    url = job["input"]["url"]
+
+    audio_path = download_audio(url)
+
     return {
         "status": "success",
-        "message": "GPU RunPod siap! Perintah diterima dari laptop.",
-        "received_input": job_input
+        "audio_path": audio_path
     }
 
-runpod.serverless.start({"handler": handler})
+runpod.serverless.start({
+    "handler": handler
+})
