@@ -8,7 +8,7 @@ import traceback
 # Load model di level global agar tidak di-load setiap ada request (hemat waktu)
 # Pastikan tipe model sama dengan yang ada di Dockerfile
 try:
-    model = whisper.load_model("base")
+    model = whisper.load_model("tiny")
 except Exception as e:
     print(f"Gagal load model: {e}")
 

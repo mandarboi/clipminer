@@ -12,8 +12,6 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --no-cache-dir runpod opencv-python mediapipe yt-dlp openai-whisper
 
 # 3. Pre-load Model (Gunakan python3)
-# Jika baris ini masih error, hapus saja.
-RUN python3 -c "import whisper; whisper.load_model('base')"
 
 COPY handler.py /handler.py
 CMD [ "python3", "-u", "/handler.py" ]
