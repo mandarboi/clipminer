@@ -16,17 +16,17 @@
 
             <!-- MENU -->
             <a href="<?= base_url('dashboard') ?>"
-               class="text-white/70 hover:text-white transition">
+                class="text-white/70 hover:text-white transition">
                 Try Demo
             </a>
 
             <a href="#"
-               class="text-white/70 hover:text-white transition">
+                class="text-white/70 hover:text-white transition">
                 Pricing
             </a>
 
             <a href="#"
-               class="text-white/70 hover:text-white transition">
+                class="text-white/70 hover:text-white transition">
                 Login
             </a>
 
@@ -35,7 +35,7 @@
                         bg-white/5 border border-white/10">
 
                 <a href="?lang=id"
-                   class="px-2 py-1 rounded text-xs
+                    class="px-2 py-1 rounded text-xs
                    <?= ($this->session->userdata('site_lang') === 'indonesian')
                         ? 'bg-brand-primary text-white'
                         : 'text-white/60 hover:text-white' ?>">
@@ -43,7 +43,7 @@
                 </a>
 
                 <a href="?lang=en"
-                   class="px-2 py-1 rounded text-xs
+                    class="px-2 py-1 rounded text-xs
                    <?= ($this->session->userdata('site_lang') === 'english')
                         ? 'bg-brand-primary text-white'
                         : 'text-white/60 hover:text-white' ?>">
@@ -52,11 +52,9 @@
             </div>
 
             <!-- CTA -->
-            <a href="#"
-               class="px-4 py-2 rounded-lg bg-brand-primary
-                      hover:opacity-90 transition text-white font-semibold">
+            <button type="button" @click="openSignUp = true" class="bg-brand-primary px-6 py-2 rounded-xl font-bold">
                 Sign Up
-            </a>
+            </button>
         </div>
 
     </div>

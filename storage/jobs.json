@@ -1,26 +1,464 @@
 [
     {
-        "id": "job_1767112171",
-        "youtube_url": "https:\/\/www.youtube.com\/shorts\/xTTIiAZ1EvE",
-        "status": "pending",
-        "created_at": "2025-12-31 00:29:31"
-    },
-    {
-        "id": "job_1767112242",
-        "youtube_url": "https:\/\/www.youtube.com\/shorts\/xTTIiAZ1EvE",
-        "status": "pending",
-        "created_at": "2025-12-31 00:30:42"
-    },
-    {
-        "id": "job_1767197736",
+        "id": "job_1767496888",
+        "user_id": "cjh92l5avqk7cf326scn82safgqsdtkh",
         "youtube_url": "https:\/\/www.youtube.com\/shorts\/xTTIiAZ1EvE",
         "status": "preview_ready",
-        "created_at": "2026-01-01 00:15:36"
+        "created_at": "2026-01-04 04:21:28"
     },
     {
-        "id": "job_1767235882",
+        "id": "job_1767497305",
+        "user_id": "94qf98u586goi9hm7r7oq56n2d5l1hql",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 04:28:25"
+    },
+    {
+        "id": "job_1767497374",
+        "user_id": "7j4c5ri1b89ae6tu6s4fghe9nbpbv0gb",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 04:29:34"
+    },
+    {
+        "id": "job_1767497747",
+        "user_id": "91qr9ts4pkgeo601ge9e28n88tm1kigg",
         "youtube_url": "https:\/\/www.youtube.com\/shorts\/xTTIiAZ1EvE",
         "status": "preview_ready",
-        "created_at": "2026-01-01 03:51:22"
+        "created_at": "2026-01-04 04:35:47"
+    },
+    {
+        "id": "job_1767498057",
+        "user_id": "flmvm1ls3u4go4iu6fcdvddf81kbgiar",
+        "youtube_url": "https:\/\/www.youtube.com\/shorts\/xTTIiAZ1EvE",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 04:40:57"
+    },
+    {
+        "id": "job_1767498532",
+        "user_id": "86ed1ma3943nmurrm09u28uotvfc8j5u",
+        "youtube_url": "https:\/\/www.youtube.com\/shorts\/xTTIiAZ1EvE",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 04:48:52"
+    },
+    {
+        "id": "job_1767498798",
+        "user_id": "86ed1ma3943nmurrm09u28uotvfc8j5u",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 04:53:18"
+    },
+    {
+        "id": "job_1767498935",
+        "user_id": "94tadm4km2isnmm82j29q221fc1j7rk0",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 04:55:35"
+    },
+    {
+        "id": "job_1767499307",
+        "user_id": "bu07p0fddsetlgoh184gali6d9bpqqq0",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 05:01:47"
+    },
+    {
+        "id": "job_1767499694",
+        "user_id": "i3c006uohuu7oqsvaji5pklb2u8vs4nb",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 05:08:14"
+    },
+    {
+        "id": "job_1767500010",
+        "user_id": "3cuavnvsuip6smb5dv6bb5h40ddm3rrb",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cwhttps:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 05:13:30"
+    },
+    {
+        "id": "job_1767500158",
+        "user_id": "3cuavnvsuip6smb5dv6bb5h40ddm3rrb",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cwhttps:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 05:15:58"
+    },
+    {
+        "id": "job_1767500175",
+        "user_id": "3cuavnvsuip6smb5dv6bb5h40ddm3rrb",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 05:16:15"
+    },
+    {
+        "id": "job_1767500367",
+        "user_id": "krl226c6gsos8oku14st9kq47otc5p73",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 05:19:27"
+    },
+    {
+        "id": "job_1767502065",
+        "user_id": "fvn3rf62u4ffm429530a60mfj56i245e",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 05:47:45"
+    },
+    {
+        "id": "job_1767502379",
+        "user_id": "m8f8immf67i21euhkr79hmom03fj86sv",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 05:52:59"
+    },
+    {
+        "id": "job_1767502754",
+        "user_id": "68can3hqg9a0actq7389o59uignqu139",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 05:59:14"
+    },
+    {
+        "id": "job_1767503010",
+        "user_id": "68can3hqg9a0actq7389o59uignqu139",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:03:30"
+    },
+    {
+        "id": "job_1767503049",
+        "user_id": "68can3hqg9a0actq7389o59uignqu139",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:04:09"
+    },
+    {
+        "id": "job_1767503084",
+        "user_id": "7hi0rh4bnav7e1kggc29tstplaeso2h3",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:04:44"
+    },
+    {
+        "id": "job_1767503365",
+        "user_id": "7hi0rh4bnav7e1kggc29tstplaeso2h3",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:09:25"
+    },
+    {
+        "id": "job_1767503490",
+        "user_id": "5t2klod0n72uifj6th42idcmo7tispu0",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:11:30"
+    },
+    {
+        "id": "job_1767503719",
+        "user_id": "5t2klod0n72uifj6th42idcmo7tispu0",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:15:19"
+    },
+    {
+        "id": "job_1767503935",
+        "user_id": "t451hfitf74iks09q0e4gq85q8p4dfla",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:18:55"
+    },
+    {
+        "id": "job_1767504024",
+        "user_id": "t451hfitf74iks09q0e4gq85q8p4dfla",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:20:24"
+    },
+    {
+        "id": "job_1767504162",
+        "user_id": "t451hfitf74iks09q0e4gq85q8p4dfla",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:22:42"
+    },
+    {
+        "id": "job_1767504243",
+        "user_id": "lurihokqghi01v8e2la4v79inag6tu90",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:24:03"
+    },
+    {
+        "id": "job_1767504422",
+        "user_id": "lurihokqghi01v8e2la4v79inag6tu90",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:27:02"
+    },
+    {
+        "id": "job_1767504510",
+        "user_id": "lurihokqghi01v8e2la4v79inag6tu90",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:28:30"
+    },
+    {
+        "id": "job_1767504537",
+        "user_id": "lurihokqghi01v8e2la4v79inag6tu90",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:28:57"
+    },
+    {
+        "id": "job_1767504728",
+        "user_id": "bkre9bev2v3cke740tj5ekihb4in8jrf",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:32:08"
+    },
+    {
+        "id": "job_1767504859",
+        "user_id": "bkre9bev2v3cke740tj5ekihb4in8jrf",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cwhttps:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:34:19"
+    },
+    {
+        "id": "job_1767504874",
+        "user_id": "bkre9bev2v3cke740tj5ekihb4in8jrf",
+        "youtube_url": "https:\/\/www.youtube.com\/shorts\/xTTIiAZ1EvE",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:34:34"
+    },
+    {
+        "id": "job_1767504907",
+        "user_id": "bkre9bev2v3cke740tj5ekihb4in8jrf",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:35:07"
+    },
+    {
+        "id": "job_1767505119",
+        "user_id": "dkd2th0f3mbcbfp74c9ujj551cj301jk",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:38:39"
+    },
+    {
+        "id": "job_1767505511",
+        "user_id": "t1ijrcse9sqa4uf7055ncjnrov10t7h7",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:45:11"
+    },
+    {
+        "id": "job_1767505653",
+        "user_id": "t1ijrcse9sqa4uf7055ncjnrov10t7h7",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cwhttps:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:47:33"
+    },
+    {
+        "id": "job_1767506323",
+        "user_id": "6bfb45v9f3nj6rmn9s3vi5i0ttq48rbf",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 06:58:43"
+    },
+    {
+        "id": "job_1767506411",
+        "user_id": "6bfb45v9f3nj6rmn9s3vi5i0ttq48rbf",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 07:00:11"
+    },
+    {
+        "id": "job_1767506600",
+        "user_id": "6bfb45v9f3nj6rmn9s3vi5i0ttq48rbf",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 07:03:20"
+    },
+    {
+        "id": "job_1767506924",
+        "user_id": "m9oie8v9a7nnv738dokuqt1lvt26kag4",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 07:08:44"
+    },
+    {
+        "id": "job_1767507011",
+        "user_id": "m9oie8v9a7nnv738dokuqt1lvt26kag4",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 07:10:11"
+    },
+    {
+        "id": "job_1767507099",
+        "user_id": "m9oie8v9a7nnv738dokuqt1lvt26kag4",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 07:11:39"
+    },
+    {
+        "id": "job_1767507178",
+        "user_id": "m9oie8v9a7nnv738dokuqt1lvt26kag4",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cwhttps:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 07:12:58"
+    },
+    {
+        "id": "job_1767507235",
+        "user_id": "bev6dabt7q82mt61apmmi3ftlg0n15ia",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 07:13:55"
+    },
+    {
+        "id": "job_1767507376",
+        "user_id": "bev6dabt7q82mt61apmmi3ftlg0n15ia",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 07:16:16"
+    },
+    {
+        "id": "job_1767507526",
+        "user_id": "bev6dabt7q82mt61apmmi3ftlg0n15ia",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cwhttps:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 07:18:46"
+    },
+    {
+        "id": "job_1767508069",
+        "user_id": "jbh9ms1lq29qdhf8o61mkar2i5nppar9",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 07:27:49"
+    },
+    {
+        "id": "job_1767508163",
+        "user_id": "jbh9ms1lq29qdhf8o61mkar2i5nppar9",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 07:29:23"
+    },
+    {
+        "id": "job_1767508209",
+        "user_id": "jbh9ms1lq29qdhf8o61mkar2i5nppar9",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=vxYMSNRQ5cw",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 07:30:09"
+    },
+    {
+        "id": "job_1767530219",
+        "user_id": "rktcu5lcr92cnjbu4sjb7m3jvcrc4542",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=pR8wlgOsh7Q",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 13:36:59"
+    },
+    {
+        "id": "job_1767530380",
+        "user_id": "rktcu5lcr92cnjbu4sjb7m3jvcrc4542",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=BHXLlW4bErA",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 13:39:40"
+    },
+    {
+        "id": "job_1767530544",
+        "user_id": "voketi06cqd5ct3f56s9is533f8fljvm",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=BHXLlW4bErA",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 13:42:24"
+    },
+    {
+        "id": "job_1767530710",
+        "user_id": "voketi06cqd5ct3f56s9is533f8fljvm",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=BHXLlW4bErA",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 13:45:10"
+    },
+    {
+        "id": "job_1767532152",
+        "user_id": "f6ieg98biqglhn83ao14ujnh27sg74po",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=QJfVy6O7f3Q",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 14:09:12"
+    },
+    {
+        "id": "job_1767532220",
+        "user_id": "f6ieg98biqglhn83ao14ujnh27sg74po",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=QJfVy6O7f3Q",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 14:10:20"
+    },
+    {
+        "id": "job_1767532310",
+        "user_id": "f6ieg98biqglhn83ao14ujnh27sg74po",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=BHXLlW4bErA",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 14:11:50"
+    },
+    {
+        "id": "job_1767534988",
+        "user_id": "es4oah3manlp2mqertqnktijcecidq7o",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=BHXLlW4bErA",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 14:56:28"
+    },
+    {
+        "id": "job_1767535022",
+        "user_id": "es4oah3manlp2mqertqnktijcecidq7o",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=xYo_L6rg140",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 14:57:02"
+    },
+    {
+        "id": "job_1767537660",
+        "user_id": "iaem8tndhqrci5ijg4ime0t3enu1brbr",
+        "youtube_url": "https:\/\/www.youtube.com\/shorts\/xTTIiAZ1EvE",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 15:41:00"
+    },
+    {
+        "id": "job_1767537668",
+        "user_id": "iaem8tndhqrci5ijg4ime0t3enu1brbr",
+        "youtube_url": "https:\/\/www.youtube.com\/shorts\/xTTIiAZ1EvE",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 15:41:08"
+    },
+    {
+        "id": "job_1767537675",
+        "user_id": "qbo8ldfbhoj400dts9i0o8racshkppbc",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=QJfVy6O7f3Q",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 15:41:15"
+    },
+    {
+        "id": "job_1767537832",
+        "user_id": "qbo8ldfbhoj400dts9i0o8racshkppbc",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 15:43:52"
+    },
+    {
+        "id": "job_1767537846",
+        "user_id": "qbo8ldfbhoj400dts9i0o8racshkppbc",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=QJfVy6O7f3Q",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 15:44:06"
+    },
+    {
+        "id": "job_1767537862",
+        "user_id": "qbo8ldfbhoj400dts9i0o8racshkppbc",
+        "youtube_url": "https:\/\/www.youtube.com\/watch?v=BHXLlW4bErA",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 15:44:22"
+    },
+    {
+        "id": "job_1767537875",
+        "user_id": "qbo8ldfbhoj400dts9i0o8racshkppbc",
+        "youtube_url": "https:\/\/youtu.be\/stNTfLJSf_w?si=V3CSg0tiguTqdfni",
+        "status": "preview_ready",
+        "created_at": "2026-01-04 15:44:35"
     }
 ]

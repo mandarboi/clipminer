@@ -69,13 +69,3 @@ Digunakan untuk card, modal, panel, preview box.
 ```html
 <a class="bg-indigo-600 hover:bg-indigo-500 text-white
           px-4 py-3 rounded-xl font-semibold transition">
-
----
-
-Kalau mau lanjut, opsi paling logis berikutnya:
-
-- 🔜 **Login / Register UI** pakai brand token ini  
-- 🔜 **Dashboard logged-in UI** (Run AI + quota badge)  
-- 🔜 **Processing screen** (progress bar konsisten brand)
-
-Tinggal bilang mau ke mana.
