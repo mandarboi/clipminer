@@ -1,31 +1,48 @@
 import runpod
 import subprocess
 import whisper
+import uuid
+import traceback
+
+model = whisper.load_model("small")  # load SEKALI
 
 def download_audio(url):
-    output = "/tmp/audio.wav"
-    subprocess.run([
-        "yt-dlp", "-x", "--audio-format", "wav",
-        "--postprocessor-args", "-t 30",
-        "-o", output, url
-    ], check=True)
+    output = f"/tmp/{uuid.uuid4()}.wav"
+    subprocess.run(
+        [
+            "yt-dlp",
+            "-x",
+            "--audio-format", "wav",
+            "--postprocessor-args", "-t 30",
+            "-o", output,
+            url
+        ],
+        check=False,  # PENTING
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
+    )
     return output
 
-def transcribe(audio_path):
-    model = whisper.load_model("small")
-    result = model.transcribe(audio_path)
-    return result["segments"]
-
 def handler(job):
-    url = job["input"]["url"]
+    try:
+        url = job["input"].get("url")
+        if not url:
+            return {"status": "error", "error": "URL missing"}
 
-    audio_path = download_audio(url)
-    segments = transcribe(audio_path)
+        audio_path = download_audio(url)
+        segments = model.transcribe(audio_path)["segments"]
 
-    return {
-        "status": "success",
-        "segments": segments
-    }
+        return {
+            "status": "success",
+            "segments": segments
+        }
+
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e),
+            "trace": traceback.format_exc()
+        }
 
 runpod.serverless.start({
     "handler": handler
