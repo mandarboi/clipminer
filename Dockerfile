@@ -1,5 +1,4 @@
-FROM runpod/pytorch:2.2.1-py3.10-cuda12.1.1-devel-ubuntu22.04
-
+FROM runpod/pytorch:2.2.1-py3.10-cuda12.1.1-runtime-ubuntu22.04
 # 1. Install System Dependencies + Certs
 RUN apt-get update && apt-get install -y \
     ffmpeg \
