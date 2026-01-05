@@ -1,49 +1,62 @@
 import runpod
 import subprocess
-import whisper
+import os
 import uuid
-import traceback
+from faster_whisper import WhisperModel
 
-model = whisper.load_model("small")  # load SEKALI
+# Load model di awal agar tidak di-load berulang kali
+# Gunakan 'tiny' untuk testing, ganti 'base' atau 'small' jika sudah stabil
+model_size = "base"
+model = WhisperModel(model_size, device="cuda", compute_type="float16")
 
 def download_audio(url):
     output = f"/tmp/{uuid.uuid4()}.wav"
-    subprocess.run(
-        [
-            "yt-dlp",
-            "-x",
-            "--audio-format", "wav",
-            "--postprocessor-args", "-t 30",
-            "-o", output,
-            url
-        ],
-        check=False,  # PENTING
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE
-    )
+    # Pastikan yt-dlp dan ffmpeg tersedia di system
+    command = [
+        "yt-dlp",
+        "-x",
+        "--audio-format", "wav",
+        "-o", output,
+        url
+    ]
+    result = subprocess.run(command, capture_output=True, text=True)
+    if result.returncode != 0:
+        raise Exception(f"yt-dlp error: {result.stderr}")
     return output
 
 def handler(job):
+    audio_path = None
     try:
         url = job["input"].get("url")
         if not url:
-            return {"status": "error", "error": "URL missing"}
+            return {"status": "error", "message": "URL missing"}
 
+        # 1. Download
         audio_path = download_audio(url)
-        segments = model.transcribe(audio_path)["segments"]
+
+        # 2. Transcribe
+        segments, info = model.transcribe(audio_path, beam_size=5)
+        
+        results = []
+        for segment in segments:
+            results.append({
+                "start": segment.start,
+                "end": segment.end,
+                "text": segment.text
+            })
 
         return {
             "status": "success",
-            "segments": segments
+            "language": info.language,
+            "segments": results
         }
 
     except Exception as e:
-        return {
-            "status": "error",
-            "message": str(e),
-            "trace": traceback.format_exc()
-        }
+        return {"status": "error", "message": str(e)}
+    
+    finally:
+        # Hapus file sampah agar disk container tidak penuh
+        if audio_path and os.path.exists(audio_path):
+            os.remove(audio_path)
 
-runpod.serverless.start({
-    "handler": handler
-})
+runpod.serverless.start({"handler": handler})
